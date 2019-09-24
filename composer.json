@@ -1,0 +1,15 @@
+{
+    "name": "el7cosmos/phpstorm-swoole-plugin",
+    "description": "Swoole IDE Helper",
+    "type": "project",
+    "require": {
+        "swoole/ide-helper": "^4.4"
+    },
+    "license": "Apache-2.0",
+    "authors": [
+        {
+            "name": "el7cosmos",
+            "email": "el@elabee.me"
+        }
+    ]
+}
