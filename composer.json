@@ -11,12 +11,5 @@
             "name": "el7cosmos",
             "email": "el@elabee.me"
         }
-    ],
-    "extra": {
-        "patches": {
-            "swoole/ide-helper": {
-                "Skip git add": "patches/skip-git-add.patch"
-            }
-        }
-    }
+    ]
 }
