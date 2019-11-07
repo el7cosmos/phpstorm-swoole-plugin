@@ -1,14 +1,14 @@
 <idea-plugin version="2">
   <id>me.elabee.idea.plugin.swoole</id>
   <name>Swoole IDE Helper</name>
-  <version>4.4.7</version>
+  <version>4.4.8</version>
   <vendor email="el@elabee.me" url="https://elabee.me">Luhur Abdi Rizal</vendor>
 
   <description><![CDATA[
     IDE help files for Swoole.
   ]]></description>
 
-  <idea-version since-build="163.3984" until-build="193.3519.*"/>
+  <idea-version since-build="163.3984" until-build="193.*"/>
 
   <depends>com.intellij.modules.platform</depends>
   <depends>com.jetbrains.php</depends>
