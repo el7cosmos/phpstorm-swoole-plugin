@@ -1,0 +1,9 @@
+diff --git a/bin/generator.sh b/bin/generator.sh
+index 8b5635d..70f3c1b 100755
+--- a/bin/generator.sh
++++ b/bin/generator.sh
+@@ -39,4 +39,3 @@ docker run --rm                      \
+     -e SWOOLE_EXT_ZOOKEEPER=enabled  \
+     -t phpswoole/swoole:${image_tag} \
+     bash -c "composer install && SWOOLE_SRC_DIR=/usr/src/swoole ./bin/generator.php"
+-git add ./output
