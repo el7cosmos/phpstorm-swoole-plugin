@@ -22,4 +22,9 @@ jobs:
     # - name: Run test suite
     #   run: composer run-script test
 
-      - run: vendor/swoole/ide-helper/bin/generator.sh 4.4.12
+      - run: printenv && ls -la
+      - run: |
+          vendor/swoole/ide-helper/bin/generator.sh 4.4.12
+          ls -la vendor/swoole/ide-helper/output
+          mv vendor/swoole/ide-helper/output swoole-meta
+          zip -r phpstorm-swoole-plugin.jar META-INF swoole-meta
