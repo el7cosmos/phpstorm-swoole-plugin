@@ -1,7 +1,7 @@
 <idea-plugin version="2">
   <id>me.elabee.idea.plugin.swoole</id>
   <name>Swoole IDE Helper</name>
-  <version>4.4.16</version>
+  <version>4.4.17</version>
   <vendor email="el@elabee.me" url="https://elabee.me">Luhur Abdi Rizal</vendor>
 
   <description><![CDATA[
@@ -9,7 +9,7 @@
   ]]></description>
 
   <change-notes><![CDATA[
-    PHP stubs for <a href="https://github.com/swoole/swoole-src/releases/tag/v4.4.16">Swoole 4.4.16</a>.
+    PHP stubs for <a href="https://github.com/swoole/swoole-src/releases/tag/v4.4.17">Swoole 4.4.17</a>.
   ]]></change-notes>
 
   <idea-version since-build="163.3984" until-build="201.*"/>
