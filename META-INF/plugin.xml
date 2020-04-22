@@ -8,7 +8,7 @@
     IDE help files for Swoole.
   ]]></description>
 
-  <idea-version since-build="163.3984" until-build="193.*"/>
+  <idea-version since-build="163.3984" until-build="201.*"/>
 
   <depends>com.intellij.modules.platform</depends>
   <depends>com.jetbrains.php</depends>
