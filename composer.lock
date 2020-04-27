@@ -8,16 +8,16 @@
     "packages": [
         {
             "name": "swoole/ide-helper",
-            "version": "4.4.18",
+            "version": "4.5.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/swoole/ide-helper.git",
-                "reference": "61bfb54d7fca13309b005dd7375d171d6d8e8162"
+                "reference": "bfc9e789a6bf90775da9a3095e7877899deb6a2d"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/swoole/ide-helper/zipball/61bfb54d7fca13309b005dd7375d171d6d8e8162",
-                "reference": "61bfb54d7fca13309b005dd7375d171d6d8e8162",
+                "url": "https://api.github.com/repos/swoole/ide-helper/zipball/bfc9e789a6bf90775da9a3095e7877899deb6a2d",
+                "reference": "bfc9e789a6bf90775da9a3095e7877899deb6a2d",
                 "shasum": ""
             },
             "require-dev": {
@@ -38,7 +38,7 @@
                 }
             ],
             "description": "IDE help files for Swoole.",
-            "time": "2020-04-26T02:33:56+00:00"
+            "time": "2020-04-26T18:12:57+00:00"
         }
     ],
     "packages-dev": [],
