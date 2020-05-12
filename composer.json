@@ -3,7 +3,7 @@
     "description": "Swoole IDE Helper",
     "type": "project",
     "require": {
-        "swoole/ide-helper": "^4.4"
+        "swoole/ide-helper": "^4.5"
     },
     "license": "Apache-2.0",
     "authors": [
