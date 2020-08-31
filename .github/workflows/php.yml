@@ -2,16 +2,10 @@ name: PHP Composer
 
 on: [push]
 
-env:
-  SWOOLE_VERSION: 4.5.0
-
 jobs:
   build:
 
     runs-on: ubuntu-latest
-
-    container:
-      image: phpswoole/swoole:4.5.0-php7.1
 
     steps:
       - uses: actions/checkout@v1
@@ -22,8 +16,11 @@ jobs:
       - name: Install dependencies
         run: composer install --prefer-dist --no-progress --no-suggest
 
-    # Add a test script to composer.json, for instance: "test": "vendor/bin/phpunit"
-    # Docs: https://getcomposer.org/doc/articles/scripts.md
+      - run: composer install --working-dir=vendor/swoole/ide-helper
 
-    # - name: Run test suite
-    #   run: composer run-script test
+      - uses: docker://phpswoole/swoole:4.5.2-php7.1
+        with:
+          args: vendor/swoole/ide-helper/bin/generator.php
+
+      - run: mv vendor/swoole/ide-helper/output swoole-meta
+      - run: ls -la swoole-meta
