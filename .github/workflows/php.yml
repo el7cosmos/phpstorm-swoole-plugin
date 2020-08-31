@@ -8,10 +8,22 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - uses: actions/checkout@v1
+      - uses: actions/checkout@v2
 
       - name: Validate composer.json and composer.lock
-        run: composer validate
+        run: composer validate --ansi
+
+      - name: Get Composer Cache Directory
+        id: composer-cache
+        run: |
+          echo "::set-output name=dir::$(composer config cache-dir)"
+
+      - uses: actions/cache@v2
+        with:
+          path: ${{ steps.composer-cache.outputs.dir }}
+          key: ${{ runner.os }}-composer-${{ hashFiles('**/composer.lock') }}
+          restore-keys: |
+            ${{ runner.os }}-composer-
 
       - name: Install dependencies
         run: composer install --prefer-dist --no-progress --no-suggest
@@ -23,4 +35,5 @@ jobs:
           args: vendor/swoole/ide-helper/bin/generator.php
 
       - run: mv vendor/swoole/ide-helper/output swoole-meta
-      - run: ls -la swoole-meta
+
+      - run: zip -r phpstorm-swoole-plugin.jar META-INF swoole-meta
