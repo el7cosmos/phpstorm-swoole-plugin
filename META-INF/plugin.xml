@@ -1,3 +1,4 @@
+<?xml version="1.0"?>
 <idea-plugin>
   <id>me.elabee.idea.plugin.swoole</id>
   <name>Swoole IDE Helper</name>

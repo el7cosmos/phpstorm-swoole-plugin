@@ -2,14 +2,33 @@
     "name": "el7cosmos/phpstorm-swoole-plugin",
     "description": "Swoole IDE Helper",
     "type": "project",
-    "require": {
-        "swoole/ide-helper": "^4.5"
-    },
     "license": "Apache-2.0",
     "authors": [
         {
             "name": "el7cosmos",
             "email": "el@elabee.me"
         }
-    ]
+    ],
+    "require": {
+        "ext-SimpleXML": "*",
+        "ext-dom": "*",
+        "swoole/ide-helper": "^4.5"
+    },
+    "require-dev": {
+        "composer/composer": "^1.10",
+        "symfony/yaml": "^5.1"
+    },
+    "autoload": {
+        "psr-4": {
+            "Elabee\\Phpstorm\\Swoole\\Plugin\\": "src/"
+        }
+    },
+    "config": {
+        "sort-packages": true
+    },
+    "scripts": {
+        "post-package-update": [
+            "Elabee\\Phpstorm\\Swoole\\Plugin\\ComposerScript::postPackageUpdate"
+        ]
+    }
 }
