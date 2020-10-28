@@ -29,7 +29,7 @@ jobs:
         run: 'composer install --working-dir=vendor/swoole/ide-helper'
       -
         id: generate
-        uses: 'docker://phpswoole/swoole:4.5.5-php7.1'
+        uses: 'docker://phpswoole/swoole:4.5.6-php7.1'
         with:
           args: vendor/swoole/ide-helper/bin/generator.php
       -
