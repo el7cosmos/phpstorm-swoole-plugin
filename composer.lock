@@ -8,16 +8,16 @@
     "packages": [
         {
             "name": "swoole/ide-helper",
-            "version": "4.5.6",
+            "version": "4.5.7",
             "source": {
                 "type": "git",
                 "url": "https://github.com/swoole/ide-helper.git",
-                "reference": "ab23c2c35880144a6060a3f178a68af0d0c6fc93"
+                "reference": "d0a31c530161ba0c44e199e105e6ec0b1f4b3e9e"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/swoole/ide-helper/zipball/ab23c2c35880144a6060a3f178a68af0d0c6fc93",
-                "reference": "ab23c2c35880144a6060a3f178a68af0d0c6fc93",
+                "url": "https://api.github.com/repos/swoole/ide-helper/zipball/d0a31c530161ba0c44e199e105e6ec0b1f4b3e9e",
+                "reference": "d0a31c530161ba0c44e199e105e6ec0b1f4b3e9e",
                 "shasum": ""
             },
             "require-dev": {
@@ -40,9 +40,9 @@
             "description": "IDE help files for Swoole.",
             "support": {
                 "issues": "https://github.com/swoole/ide-helper/issues",
-                "source": "https://github.com/swoole/ide-helper/tree/4.5.6"
+                "source": "https://github.com/swoole/ide-helper/tree/4.5.7"
             },
-            "time": "2020-10-27T16:11:26+00:00"
+            "time": "2020-11-06T21:24:31+00:00"
         }
     ],
     "packages-dev": [
@@ -123,16 +123,16 @@
         },
         {
             "name": "composer/composer",
-            "version": "1.10.16",
+            "version": "1.10.17",
             "source": {
                 "type": "git",
                 "url": "https://github.com/composer/composer.git",
-                "reference": "217f0272673c72087862c40cf91ac07eb438d778"
+                "reference": "09d42e18394d8594be24e37923031c4b7442a1cb"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/composer/composer/zipball/217f0272673c72087862c40cf91ac07eb438d778",
-                "reference": "217f0272673c72087862c40cf91ac07eb438d778",
+                "url": "https://api.github.com/repos/composer/composer/zipball/09d42e18394d8594be24e37923031c4b7442a1cb",
+                "reference": "09d42e18394d8594be24e37923031c4b7442a1cb",
                 "shasum": ""
             },
             "require": {
@@ -202,7 +202,7 @@
             "support": {
                 "irc": "irc://irc.freenode.org/composer",
                 "issues": "https://github.com/composer/composer/issues",
-                "source": "https://github.com/composer/composer/tree/1.10.16"
+                "source": "https://github.com/composer/composer/tree/1.10.17"
             },
             "funding": [
                 {
@@ -218,7 +218,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2020-10-24T07:55:59+00:00"
+            "time": "2020-10-30T21:31:58+00:00"
         },
         {
             "name": "composer/semver",

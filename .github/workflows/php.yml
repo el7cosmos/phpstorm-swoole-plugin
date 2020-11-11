@@ -29,7 +29,7 @@ jobs:
         run: 'composer install --working-dir=vendor/swoole/ide-helper'
       -
         id: generate
-        uses: 'docker://phpswoole/swoole:4.5.6-php7.1'
+        uses: 'docker://phpswoole/swoole:4.5.7-php7.3'
         with:
           args: vendor/swoole/ide-helper/bin/generator.php
       -
@@ -58,3 +58,8 @@ jobs:
           asset_path: ./phpstorm-swoole-plugin.jar
           asset_name: phpstorm-swoole-plugin.jar
           asset_content_type: application/java-archive
+      -
+        name: 'Upload to marketplace'
+        env:
+          JETBRAINS_TOKEN: '${{ secrets.JETBRAINS_TOKEN }}'
+        run: 'curl -i --header "Authorization: Bearer $JETBRAINS_TOKEN" -F xmlId=me.elabee.idea.plugin.swoole -F file=@phpstorm-swoole-plugin.jar -F channel=stable https://plugins.jetbrains.com/plugin/uploadPlugin'
