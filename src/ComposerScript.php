@@ -35,7 +35,7 @@ class ComposerScript
             $yaml = Yaml::parseFile($action);
             foreach ($yaml['jobs']['build']['steps'] as $i => $step) {
                 if (isset($step['id']) && $step['id'] === 'generate') {
-                    $yaml['jobs']['build']['steps'][$i]['uses'] = "docker://phpswoole/swoole:${version}-php7.1";
+                    $yaml['jobs']['build']['steps'][$i]['uses'] = "docker://phpswoole/swoole:${version}-php7.3";
                 }
             }
             file_put_contents($action, Yaml::dump($yaml, PHP_INT_MAX, 2));
