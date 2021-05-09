@@ -7,7 +7,6 @@ use Composer\DependencyResolver\Operation\OperationInterface;
 use Composer\DependencyResolver\Operation\UpdateOperation;
 use Composer\Installer\PackageEvent;
 use Composer\Package\PackageInterface;
-use Symfony\Component\Yaml\Yaml;
 
 class ComposerScript
 {
@@ -30,15 +29,6 @@ class ComposerScript
               "PHP stubs for <a href=\"https://github.com/swoole/swoole-src/releases/tag/v${version}\">Swoole ${version}</a>."
             );
             $xml->saveXML($plugin);
-
-            $action = __DIR__ . '/../.github/workflows/php.yml';
-            $yaml = Yaml::parseFile($action);
-            foreach ($yaml['jobs']['build']['steps'] as $i => $step) {
-                if (isset($step['id']) && $step['id'] === 'generate') {
-                    $yaml['jobs']['build']['steps'][$i]['uses'] = "docker://phpswoole/swoole:${version}-php7.3";
-                }
-            }
-            file_put_contents($action, Yaml::dump($yaml, PHP_INT_MAX, 2));
         }
     }
 
