@@ -12,14 +12,14 @@ namespace Elabee\Phpstorm\Swoole\Plugin;
 class IdeaPluginXMLElement extends \SimpleXMLElement
 {
 
-    public function setVersion(string $version)
+    public function setVersion(string $version): static
     {
         $this->version = $version;
 
         return $this;
     }
 
-    public function setChangeNotes(string $data)
+    public function setChangeNotes(string $data): static
     {
         $dom = dom_import_simplexml($this->{'change-notes'});
         assert($dom->firstChild instanceof \DOMCdataSection);
