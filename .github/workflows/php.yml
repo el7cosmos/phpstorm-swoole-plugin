@@ -20,7 +20,7 @@ jobs:
           restore-keys: '${{ runner.os }}-composer-'
       - name: 'Install dependencies'
         run: 'composer install --prefer-dist --no-progress --no-suggest'
-      - run: 'mv vendor/swoole/ide-helper/output swoole-meta'
+      - run: 'mv vendor/swoole/ide-helper/src swoole-meta'
       - run: 'zip -r phpstorm-swoole-plugin.jar META-INF swoole-meta'
       - name: Create a release and attach files
         run: |
