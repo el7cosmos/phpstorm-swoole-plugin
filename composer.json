@@ -15,7 +15,7 @@
         "swoole/ide-helper": "^4.8"
     },
     "require-dev": {
-        "composer/composer": "^2.1"
+        "composer/composer": "^2.2"
     },
     "autoload": {
         "psr-4": {
