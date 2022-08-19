@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "7560fe44516f09c82388fe282a03338c",
+    "content-hash": "8cbfbe434bf5f329e55ff15a69441361",
     "packages": [
         {
             "name": "swoole/ide-helper",
@@ -1905,6 +1905,7 @@
     "prefer-stable": false,
     "prefer-lowest": false,
     "platform": {
+        "php": "^8.1",
         "ext-simplexml": "*",
         "ext-dom": "*"
     },
