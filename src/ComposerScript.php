@@ -34,15 +34,11 @@ class ComposerScript
 
     private static function getPackage(OperationInterface $operation
     ): ?PackageInterface {
-        if ($operation instanceof InstallOperation) {
-            return $operation->getPackage();
-        }
-
-        if ($operation instanceof UpdateOperation) {
-            return $operation->getTargetPackage();
-        }
-
-        return null;
+        return match (true) {
+            $operation instanceof InstallOperation => $operation->getPackage(),
+            $operation instanceof UpdateOperation => $operation->getTargetPackage(),
+            default => null,
+        };
     }
 
 }
