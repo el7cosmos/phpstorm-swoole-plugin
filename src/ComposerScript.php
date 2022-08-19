@@ -11,22 +11,22 @@ use Composer\Package\PackageInterface;
 class ComposerScript
 {
 
-    public static function postPackageUpdate(PackageEvent $event)
+    public static function postPackageUpdate(PackageEvent $event): void
     {
         $package = self::getPackage($event->getOperation());
         if ($package && $package->getName() === 'swoole/ide-helper') {
             $version = $package->getPrettyVersion();
 
-            /** @var \Elabee\Phpstorm\Swoole\Plugin\IdeaPluginXMLElement $xml */
             $plugin = __DIR__ . '/../META-INF/plugin.xml';
             $xml = simplexml_load_file(
-              $plugin,
-              IdeaPluginXMLElement::class
+                $plugin,
+                IdeaPluginXMLElement::class
             );
+            assert($xml instanceof IdeaPluginXMLElement);
 
             $xml->setVersion($version);
             $xml->setChangeNotes(
-              "PHP stubs for <a href=\"https://github.com/swoole/swoole-src/releases/tag/v${version}\">Swoole ${version}</a>."
+                "PHP stubs for <a href=\"https://github.com/swoole/swoole-src/releases/tag/v$version\">Swoole $version</a>."
             );
             $xml->saveXML($plugin);
         }
